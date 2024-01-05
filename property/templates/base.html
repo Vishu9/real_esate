@@ -1,0 +1,26 @@
+<!-- real_estate/templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Real Estate Management{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Real Estate Management</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'property-list' %}">Properties</a></li>
+                <li><a href="{% url 'tenant-list' %}">Tenants</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
